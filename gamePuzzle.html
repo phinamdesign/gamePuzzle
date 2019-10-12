@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style>
+        #wrapper img{
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="image1"><img src="images/head1.jpg" width="304px" height="79px" alt=""></div>
+        <div id="image2"><img src="images/face1.jpg" width="304px" height="79px" alt=""></div>
+        <div id="image3"><img src="images/yea1.jpg" width="304px" height="79px" alt=""></div>
+        <div id="image4"><img src="images/mouth1.jpg" width="304px" height="79px" alt=""></div>
+        <div id="image5"><img src="images/foot1.jpg" width="304px" height="79px" alt=""></div>
+        <button type="button" onclick="changeImage1()">Image1</button>
+        <button type="button" onclick="changeImage2()">Image2</button>
+        <button type="button" onclick="changeImage3()">Image3</button>
+        <button type="button" onclick="changeImage4()">Image4</button>
+        <button type="button" onclick="changeImage5()">Image5</button>
+    </div>
+    <script>
+        var imageList1 = new Array();
+        imageList1[0] = "images/head1.jpg";
+        imageList1[1] = "images/head2.jpg";
+        imageList1[2] = "images/head3.jpg";
+
+        var imageList2 = new Array();
+        imageList2[0] = "images/face1.jpg";
+        imageList2[1] = "images/face2.jpg";
+        imageList2[2] = "images/face3.jpg";
+
+        var imageList3 = new Array();
+        imageList3[0] = "images/yea1.jpg";
+        imageList3[1] = "images/yea2.jpg";
+        imageList3[2] = "images/yea3.jpg";
+
+        var imageList4 = new Array();
+        imageList4[0] = "images/mouth1.jpg";
+        imageList4[1] = "images/mouth2.jpg";
+        imageList4[2] = "images/mouth3.jpg";
+
+        var imageList5 = new Array();
+        imageList5[0] = "images/foot1.jpg";
+        imageList5[1] = "images/foot2.jpg";
+        imageList5[2] = "images/foot3.jpg";
+
+        function changeImage1() {
+            var index1 = Math.floor(Math.random()*imageList1.length);
+            var result = '<img src = "'+imageList1[index1]+'"'+'width="304px" height="79px"/>';
+            document.getElementById("image1").innerHTML=result;
+        }
+
+        function changeImage2() {
+            var index2 = Math.floor(Math.random()*imageList2.length);
+            var result2 = '<img src = "'+imageList2[index2]+'"'+'width="304px" height="79px"/>';
+            document.getElementById("image2").innerHTML=result2;
+        }
+
+        function changeImage3() {
+            var index3 = Math.floor(Math.random()*imageList3.length);
+            var result3 = '<img src = "'+imageList3[index3]+'"'+'width="304px" height="79px"/>';
+            document.getElementById("image3").innerHTML=result3;
+        }
+
+        function changeImage4() {
+            var index4 = Math.floor(Math.random()*imageList4.length);
+            var result4 = '<img src = "'+imageList4[index4]+'"'+'width="304px" height="79px"/>';
+            document.getElementById("image4").innerHTML=result4;
+        }
+
+        function changeImage5() {
+            var index5 = Math.floor(Math.random()*imageList1.length);
+            var result5 = '<img src = "'+imageList5[index5]+'"'+'width="304px" height="79px"/>';
+            document.getElementById("image5").innerHTML=result5;
+        }
+    </script>
+</body>
+</html>
